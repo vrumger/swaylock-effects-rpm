@@ -1,5 +1,5 @@
 %define upstreamversion 1.6
-%define forkversion 0
+%define forkversion 1
 
 Name:       swaylock-effects
 Version:    %{upstreamversion}.%{forkversion}
@@ -59,6 +59,8 @@ swaylock-effects is a screen locking utility for Wayland compositors, with fancy
 
 
 %changelog
+* Wed Sep 23 2020 Edd Salkield <edd@salkield.uk> - 1.6-1
+- Upgrade to version 1.6-1 https://github.com/mortie/swaylock-effects/releases/tag/v1.6-1
 * Thu Feb 06 2020 Edd Salkield <edd@salkield.uk> - 1.6-0
 - Upgrade to version 1.6-0 https://github.com/mortie/swaylock-effects/releases/tag/v1.6-0
 * Tue Feb 04 2020 Edd Salkield <edd@salkield.uk> - 1.4-1
