@@ -1,13 +1,13 @@
+%define upstreamversion 1.6
+%define forkversion 0
+
 Name:       swaylock-effects
-Version:    1.4.1
+Version:    %{upstreamversion}.%{forkversion}
 Release:    1%{?dist}
 Summary:    Swaylock, with fancy effects
 
-%define commit 6f29f07654b289e870ffb0c619410c2f09c9259b
-
 License:    MIT
-URL:        https://github.com/mortie/swaylock-effects
-Source0:    %{url}/archive/%{commit}/%{name}-%{commit}.tar.gz
+Source0:    https://github.com/mortie/swaylock-effects/archive/v%{upstreamversion}-%{forkversion}/%{name}-v%{upstreamversion}-%{forkversion}.tar.gz
 
 # Older versions were part of the sway package
 Conflicts:      sway < 1.0
@@ -28,7 +28,7 @@ BuildRequires:  scdoc
 swaylock-effects is a screen locking utility for Wayland compositors, with fancy effects.
 
 %prep
-%autosetup -n %{name}-%{commit}
+%autosetup -n %{name}-%{upstreamversion}-%{forkversion}
 
 %build
 %meson
@@ -54,10 +54,12 @@ swaylock-effects is a screen locking utility for Wayland compositors, with fancy
 %{_datadir}/zsh/site-functions/_%{program_name}
 
 %dir %{_datadir}/fish
-%dir %{_datadir}/fish/completions
-%{_datadir}/fish/completions/%{program_name}.fish
+%dir %{_datadir}/fish/vendor_completions.d
+%{_datadir}/fish/vendor_completions.d/%{program_name}.fish
 
 
 %changelog
+* Thu Feb 06 2020 Edd Salkield <edd@salkield.uk> - 1.6-0
+- Upgrade to version 1.6-0 https://github.com/mortie/swaylock-effects/releases/tag/v1.6-0
 * Tue Feb 04 2020 Edd Salkield <edd@salkield.uk> - 1.4-1
 - Initial package import
