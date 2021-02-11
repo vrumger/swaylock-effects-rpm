@@ -3,7 +3,7 @@
 
 Name:       swaylock-effects
 Version:    %{upstreamversion}.%{forkversion}
-Release:    1%{?dist}
+Release:    3%{?dist}
 Summary:    Swaylock, with fancy effects
 
 License:    MIT
@@ -14,12 +14,15 @@ Conflicts:      sway < 1.0
 
 BuildRequires:  gcc
 BuildRequires:  meson >= 0.48.0
+BuildRequires:  cmake
 BuildRequires:  pam-devel
 BuildRequires:  pkgconfig(cairo)
 BuildRequires:  pkgconfig(gdk-pixbuf-2.0)
 BuildRequires:  pkgconfig(wayland-client)
 BuildRequires:  pkgconfig(wayland-protocols) >= 1.14
 BuildRequires:  pkgconfig(xkbcommon)
+BuildRequires:  bash-completion
+BuildRequires:  fish
 BuildRequires:  scdoc
 
 %define program_name swaylock
@@ -59,6 +62,8 @@ swaylock-effects is a screen locking utility for Wayland compositors, with fancy
 
 
 %changelog
+* Thu Feb 11 2021 Edd Salkield <edd@salkield.uk> - 1.6-3
+- Upgrade to version 1.6-3 https://github.com/mortie/swaylock-effects/releases/tag/v1.6-3
 * Wed Sep 23 2020 Edd Salkield <edd@salkield.uk> - 1.6-1
 - Upgrade to version 1.6-1 https://github.com/mortie/swaylock-effects/releases/tag/v1.6-1
 * Thu Feb 06 2020 Edd Salkield <edd@salkield.uk> - 1.6-0
