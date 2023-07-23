@@ -1,13 +1,13 @@
-%define upstreamversion 1.6
-%define forkversion 11
+%define upstreamversion 1.6.11
+#%define forkversion 11
 
 Name:       swaylock-effects
-Version:    %{upstreamversion}.%{forkversion}
-Release:    1%{?dist}
+Version:    %{upstreamversion}
+Release:    0%{?dist}
 Summary:    Swaylock, with fancy effects
 
 License:    MIT
-Source0:    https://github.com/jirutka/swaylock-effects/archive/refs/tags/v%{upstreamversion}.%{forkversion}.tar.gz
+Source0:    https://github.com/jirutka/swaylock-effects/archive/refs/tags/v%{upstreamversion}.tar.gz
 
 # Older versions were part of the sway package
 Conflicts:      sway < 1.0
@@ -32,7 +32,7 @@ BuildRequires:  scdoc
 swaylock-effects is a screen locking utility for Wayland compositors, with fancy effects.
 
 %prep
-%autosetup -n %{name}-%{upstreamversion}-%{forkversion}
+%autosetup -n %{name}-%{upstreamversion}
 
 %build
 %meson
