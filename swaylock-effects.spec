@@ -1,5 +1,5 @@
 %define upstreamversion 1.6
-%define forkversion 4
+%define forkversion 11
 
 Name:       swaylock-effects
 Version:    %{upstreamversion}.%{forkversion}
@@ -7,19 +7,20 @@ Release:    1%{?dist}
 Summary:    Swaylock, with fancy effects
 
 License:    MIT
-Source0:    https://github.com/mortie/swaylock-effects/archive/refs/tags/v%{upstreamversion}-%{forkversion}.tar.gz
+Source0:    https://github.com/jirutka/swaylock-effects/archive/refs/tags/v%{upstreamversion}-%{forkversion}.tar.gz
 
 # Older versions were part of the sway package
 Conflicts:      sway < 1.0
 
 BuildRequires:  gcc
-BuildRequires:  meson >= 0.48.0
+BuildRequires:  meson >= 0.59.0
 BuildRequires:  cmake
 BuildRequires:  pam-devel
 BuildRequires:  pkgconfig(cairo)
 BuildRequires:  pkgconfig(gdk-pixbuf-2.0)
 BuildRequires:  pkgconfig(wayland-client)
-BuildRequires:  pkgconfig(wayland-protocols) >= 1.14
+BuildRequires:  pkgconfig(wayland-protocols) >= 1.25
+BuildRequires:  pkgconfig(wayland-scanner) >= 1.15
 BuildRequires:  pkgconfig(xkbcommon)
 BuildRequires:  bash-completion
 BuildRequires:  fish
