@@ -7,7 +7,7 @@ Release:    1%{?dist}
 Summary:    Swaylock, with fancy effects
 
 License:    MIT
-Source0:    https://github.com/jirutka/swaylock-effects/archive/refs/tags/v%{upstreamversion}-%{forkversion}.tar.gz
+Source0:    https://github.com/jirutka/swaylock-effects/archive/refs/tags/v%{upstreamversion}.%{forkversion}.tar.gz
 
 # Older versions were part of the sway package
 Conflicts:      sway < 1.0
@@ -63,6 +63,8 @@ swaylock-effects is a screen locking utility for Wayland compositors, with fancy
 
 
 %changelog
+* Sun Jul 23 2023 TRS-SoD <the_real_skull@hotmail.com> - 1.6.11
+- Upgrade to version 1.6.11 https://github.com/jirutka/swaylock-effects/releases/tag/v1.6.11
 * Sun Jul 23 2023 TRS-SoD <the_real_skull@hotmail.com> - 1.6-4
 - Upgrade to version 1.6-3 https://github.com/mortie/swaylock-effects/releases/tag/v1.6-4
 * Thu Feb 11 2021 Edd Salkield <edd@salkield.uk> - 1.6-3
