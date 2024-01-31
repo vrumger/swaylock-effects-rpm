@@ -1,4 +1,4 @@
-%define upstreamversion 1.6.11
+%define upstreamversion 1.7.0.0
 #%define forkversion 11
 
 Name:       swaylock-effects
